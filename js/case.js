@@ -16,16 +16,19 @@ function updateCaseNumber(isIncript){
   return newCaseNumber;  
 }
 
-
-document.getElementById('case-pluse-btn').addEventListener('click', function(){
-    const caseNumber=updateCaseNumber(true);
+function updateCasePrice (caseNumber){
     const updatePrice=caseNumber*59;
     const price=document.getElementById('price');
     price.innerText=updatePrice;
+}
 
+document.getElementById('case-pluse-btn').addEventListener('click', function(){
+    const caseNumber=updateCaseNumber(true);
+    updateCasePrice(caseNumber);
 
 })
 
 document.getElementById('case-minuse-btn').addEventListener('click', function(){
-    updateCaseNumber(false);
+    const caseNumber= updateCaseNumber(false);
+    updateCasePrice(caseNumber);
 })
