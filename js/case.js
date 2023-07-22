@@ -25,10 +25,12 @@ function updateCasePrice (caseNumber){
 document.getElementById('case-pluse-btn').addEventListener('click', function(){
     const caseNumber=updateCaseNumber(true);
     updateCasePrice(caseNumber);
+    totalCasePhonePrice()
 
 })
 
 document.getElementById('case-minuse-btn').addEventListener('click', function(){
     const caseNumber= updateCaseNumber(false);
     updateCasePrice(caseNumber);
+    totalCasePhonePrice()
 })

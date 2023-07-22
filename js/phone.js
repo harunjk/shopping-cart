@@ -26,9 +26,17 @@ document.getElementById('phone-plus-btn').addEventListener('click',function(){
     const phoneNumber=phoneNumberUpdate(true);
 
     phonePriceUpdate(phoneNumber);
+
+    totalCasePhonePrice()
+
+
+
+
+
 })
 
 document.getElementById('phone-minus-btn').addEventListener('click',function(){
     const phoneNumber=phoneNumberUpdate(false);
     phonePriceUpdate(phoneNumber);
+    totalCasePhonePrice()
 })
